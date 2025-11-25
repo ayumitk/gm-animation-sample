@@ -14,7 +14,6 @@ interface ModalProps {
 
 // 画像アセット（Figmaから提供されたURL）
 const imgScreenshot = "./bg.png";
-const imgStar = "http://localhost:3845/assets/1e39cd256ecb8848072cb7191eb6aae57b77f9a2.svg";
 const imgGift = "./gift.svg";
 
 export default function Modal({ isOpen, onClose }: ModalProps) {
@@ -80,22 +79,6 @@ export default function Modal({ isOpen, onClose }: ModalProps) {
       };
     }
   }, [isOpen]);
-
-  // GMバッジコンポーネント
-  const GMBadge = () => (
-    <div className="relative w-[57.2px] h-[57.2px] flex items-center justify-center">
-      <div className="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 w-[47px] h-[47px]">
-        <img src={imgStar} alt="Star" className="w-full h-full" />
-      </div>
-      <div className="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2">
-        <div className="rotate-[345deg]">
-          <p className="font-bold text-sm leading-none text-[#fafafa] text-center whitespace-nowrap">
-            GM!
-          </p>
-        </div>
-      </div>
-    </div>
-  );
 
   return (
     <ModalWrapper 
